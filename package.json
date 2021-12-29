@@ -23,7 +23,8 @@
     "deploy": "yarn build && lerna publish"
   },
   "keywords": [],
-  "author": "",
+  "repository": "https://github.com/ningjianhaoNJH/tiang-ui.git",
+  "author": "ningjianhao",
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/plugin-transform-runtime": "^7.14.5",
@@ -87,7 +88,6 @@
     "vuepress-vite": "^2.0.0-beta.25"
   },
   "license": "MIT",
-  "repository": "git@github.com:leitingting08/sum-ui.git",
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
