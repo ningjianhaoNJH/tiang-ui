@@ -1,5 +1,5 @@
 {
-  "name": "@tiang-ui/{{name}}",
+  "name": "@tiang-ui/button",
   "version": "1.0.0",
   "description": "基于 Vue3.x + Element 的组件库",
   "main": "dist/index.js",

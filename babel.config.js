@@ -1,17 +1,20 @@
 /*
  * @Author: 肖槿
  * @Date: 2021-12-27 18:40:52
- * @Description:babel配置
+ * @Description:
  * @LastEditors: 肖槿
- * @LastEditTime: 2021-12-29 09:53:52
+ * @LastEditTime: 2021-12-30 13:12:54
  * @FilePath: \tiang-ui\babel.config.js
  */
 module.exports = {
+  // ATTENTION!!
+  // Preset ordering is reversed, so `@babel/typescript` will called first
+  // Do not put `@babel/typescript` before `@babel/env`, otherwise will cause a compile error
+  // See https://github.com/babel/babel/issues/12066
   presets: [
-    // babel的预设可以被看做是一组babel插件和/或options配置的共享模块
-    '@vue/cli-plugin-babel/preset', // vue-cli插件
+    '@vue/cli-plugin-babel/preset',
     [
-      '@babel/typescript', // 用于typescript的预设
+      '@babel/typescript',
       {
         isTSX: true,
         allExtensions: true

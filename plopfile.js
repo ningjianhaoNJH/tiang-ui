@@ -3,7 +3,7 @@
  * @Date: 2021-12-29 09:56:07
  * @Description:plop工具，可以使用命令生产模板文件
  * @LastEditors: 肖槿
- * @LastEditTime: 2021-12-29 11:05:49
+ * @LastEditTime: 2021-12-29 13:54:42
  * @FilePath: \tiang-ui\plopfile.js
  */
 module.exports = plop => {
@@ -22,8 +22,8 @@ module.exports = plop => {
     actions: [
       {
         type: 'add',
-        path: 'packages/{{name}}/__tests__/{{name}}.spec.ts',
-        templateFile: 'templates/__tests__/index.spec.hbs'
+        path: 'packages/{{name}}/__tests__/{{name}}.spec.ts', // 生成文件
+        templateFile: 'templates/__tests__/index.spec.hbs' // 模板文件路径
       },
       {
         type: 'add',
@@ -58,13 +58,13 @@ module.exports = plop => {
       {
         type: 'append',
         path: 'docs/.vuepress/clientAppEnhance.ts',
-        pattern: /(\/\/ -- APPSTART ITEMS HERE --)/gi,
+        pattern: /(\/\/ -- 导入文件在这加 --)/gi,
         template: "import Tiang{{hump name}} from '@tiang-ui/{{name}}'"
       },
       {
         type: 'append',
         path: 'docs/.vuepress/clientAppEnhance.ts',
-        pattern: /(\/\/ -- APPEND ITEMS HERE --)/gi,
+        pattern: /(\/\/ -- 全局组件在这加 --)/gi,
         template: "app.component('Tiang{{hump name}}', Tiang{{hump name}})"
       }
     ]
